@@ -1,0 +1,3262 @@
+{
+  "contractName": "Channel",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "name": "_accountContractAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "channelId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "ciphertext",
+          "type": "string"
+        }
+      ],
+      "name": "newChannelEvent",
+      "type": "event",
+      "signature": "0x7805676ed004c223313d995208f05f68a3c1c6635542a7271cb416e6c65e6424"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_channelId",
+          "type": "bytes32"
+        },
+        {
+          "name": "_ciphertext",
+          "type": "string"
+        }
+      ],
+      "name": "createChannel",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x04b7ea96"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_channelId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "existsChannel",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xda314caf"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_channelId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getChannelOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xaba60a70"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806104be8339810180604052602081101561003057600080fd5b505160008054600160a060020a03909216600160a060020a031990921691909117905561045c806100626000396000f3fe6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166304b7ea96811461005b578063aba60a7014610129578063da314caf1461017c575b600080fd5b34801561006757600080fd5b506101156004803603604081101561007e57600080fd5b813591908101906040810160208201356401000000008111156100a057600080fd5b8201836020820111156100b257600080fd5b803590602001918460018302840111640100000000831117156100d457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101a6945050505050565b604080519115158252519081900360200190f35b34801561013557600080fd5b506101536004803603602081101561014c57600080fd5b50356103c4565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561018857600080fd5b506101156004803603602081101561019f57600080fd5b50356103ec565b60008054604080517f0feb4b0b000000000000000000000000000000000000000000000000000000008152336004820152905173ffffffffffffffffffffffffffffffffffffffff90921691630feb4b0b91602480820192602092909190829003018186803b15801561021857600080fd5b505afa15801561022c573d6000803e3d6000fd5b505050506040513d602081101561024257600080fd5b5051151561024f57600080fd5b60008381526001602052604090205474010000000000000000000000000000000000000000900460ff161561028357600080fd5b61028b610419565b3380825260016020808401828152600088815292825260408084208651815493511515740100000000000000000000000000000000000000000274ff00000000000000000000000000000000000000001973ffffffffffffffffffffffffffffffffffffffff9290921673ffffffffffffffffffffffffffffffffffffffff19909516949094171692909217909155805188815280830182815288519282019290925287517f7805676ed004c223313d995208f05f68a3c1c6635542a7271cb416e6c65e6424948a948a94926060850192918601918190849084905b8381101561037f578181015183820152602001610367565b50505050905090810190601f1680156103ac5780820380516001836020036101000a031916815260200191505b50935050505060405180910390a25060019392505050565b60009081526001602052604090205473ffffffffffffffffffffffffffffffffffffffff1690565b60009081526001602052604090205474010000000000000000000000000000000000000000900460ff1690565b60408051808201909152600080825260208201529056fea165627a7a72305820ae2c8b4fb80def7d45b44762181141598ddd44fdef19c92aa32d727ea2d899dd0029",
+  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166304b7ea96811461005b578063aba60a7014610129578063da314caf1461017c575b600080fd5b34801561006757600080fd5b506101156004803603604081101561007e57600080fd5b813591908101906040810160208201356401000000008111156100a057600080fd5b8201836020820111156100b257600080fd5b803590602001918460018302840111640100000000831117156100d457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101a6945050505050565b604080519115158252519081900360200190f35b34801561013557600080fd5b506101536004803603602081101561014c57600080fd5b50356103c4565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561018857600080fd5b506101156004803603602081101561019f57600080fd5b50356103ec565b60008054604080517f0feb4b0b000000000000000000000000000000000000000000000000000000008152336004820152905173ffffffffffffffffffffffffffffffffffffffff90921691630feb4b0b91602480820192602092909190829003018186803b15801561021857600080fd5b505afa15801561022c573d6000803e3d6000fd5b505050506040513d602081101561024257600080fd5b5051151561024f57600080fd5b60008381526001602052604090205474010000000000000000000000000000000000000000900460ff161561028357600080fd5b61028b610419565b3380825260016020808401828152600088815292825260408084208651815493511515740100000000000000000000000000000000000000000274ff00000000000000000000000000000000000000001973ffffffffffffffffffffffffffffffffffffffff9290921673ffffffffffffffffffffffffffffffffffffffff19909516949094171692909217909155805188815280830182815288519282019290925287517f7805676ed004c223313d995208f05f68a3c1c6635542a7271cb416e6c65e6424948a948a94926060850192918601918190849084905b8381101561037f578181015183820152602001610367565b50505050905090810190601f1680156103ac5780820380516001836020036101000a031916815260200191505b50935050505060405180910390a25060019392505050565b60009081526001602052604090205473ffffffffffffffffffffffffffffffffffffffff1690565b60009081526001602052604090205474010000000000000000000000000000000000000000900460ff1690565b60408051808201909152600080825260208201529056fea165627a7a72305820ae2c8b4fb80def7d45b44762181141598ddd44fdef19c92aa32d727ea2d899dd0029",
+  "sourceMap": "135:1198:2:-;;;196:128;8:9:-1;5:2;;;30:1;27;20:12;5:2;196:128:2;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;196:128:2;259:15;:58;;-1:-1:-1;;;;;259:58:2;;;-1:-1:-1;;;;;;259:58:2;;;;;;;;;135:1198;;;;;;",
+  "deployedSourceMap": "135:1198:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;577:498;;8:9:-1;5:2;;;30:1;27;20:12;5:2;577:498:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;577:498:2;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;577:498:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;577:498:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;577:498:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;577:498:2;;-1:-1:-1;577:498:2;;-1:-1:-1;;;;;577:498:2;;;;;;;;;;;;;;;;;;;1207:124;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1207:124:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1207:124:2;;;;;;;;;;;;;;;;;;;;;;1081:120;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1081:120:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1081:120:2;;;577:498;663:4;687:15;;:41;;;;;;717:10;687:41;;;;;;:15;;;;;:29;;:41;;;;;;;;;;;;;;;:15;:41;;;5:2:-1;;;;30:1;27;20:12;5:2;687:41:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;687:41:2;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;687:41:2;679:50;;;;;;;;748:19;;;;:7;:19;;;;;:26;;;;;;747:27;739:36;;;;;;786:31;;:::i;:::-;846:10;827:29;;;886:4;866:17;;;;:24;;;827:16;900:19;;;;;;;;;;:32;;;;;;;;;;-1:-1:-1;;827:29:2;900:32;;;;-1:-1:-1;;900:32:2;;;;;;;;;;;;;;;948:98;;;;;;;;;;;;;;;;;;;;;;;;908:10;;1025:11;;948:98;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;948:98:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1064:4:2;;577:498;-1:-1:-1;;;577:498:2:o;1207:124::-;1273:7;1299:19;;;:7;:19;;;;;:25;;;;1207:124::o;1081:120::-;1145:4;1168:19;;;:7;:19;;;;;:26;;;;;;;1081:120::o;135:1198::-;;;;;;;;;;-1:-1:-1;135:1198:2;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\n\ncontract AccountContract {\n    function existsAccount(address _owner) public view returns (bool);\n}\n\ncontract Channel {\n    AccountContract accountContract;\n\n    constructor (address _accountContractAddress) public {\n        accountContract = AccountContract(_accountContractAddress);\n    }\n\n    struct channelStruct {\n        address owner;\n        bool exists;\n    }\n\n    mapping(bytes32 => channelStruct) channel;\n\n\n    event newChannelEvent (\n        address indexed owner,\n        bytes32 channelId,\n        string ciphertext\n    );\n\n    function createChannel(bytes32 _channelId, string memory _ciphertext) public returns (bool) {\n        require(accountContract.existsAccount(msg.sender));\n        require(!channel[_channelId].exists);\n\n        channelStruct memory newChannel;\n        newChannel.owner = msg.sender;\n        newChannel.exists = true;\n        channel[_channelId] = newChannel;\n\n        emit newChannelEvent(\n            msg.sender,\n            _channelId,\n            _ciphertext\n        );\n\n        return true;\n    }\n\n    function existsChannel(bytes32 _channelId) public view returns (bool) {\n        return channel[_channelId].exists;\n    }\n\n    function getChannelOwner(bytes32 _channelId) public view returns (address) {\n        return channel[_channelId].owner;\n    }\n}\n\n",
+  "sourcePath": "/home/jochen/WebstormProjects/sesamed/eth/contracts/sesamed/Channel.sol",
+  "ast": {
+    "absolutePath": "/home/jochen/WebstormProjects/sesamed/eth/contracts/sesamed/Channel.sol",
+    "exportedSymbols": {
+      "AccountContract": [
+        163
+      ],
+      "Channel": [
+        278
+      ]
+    },
+    "id": 279,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 155,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 163,
+        "linearizedBaseContracts": [
+          163
+        ],
+        "name": "AccountContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 162,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "existsAccount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 157,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "88:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 156,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "87:16:2"
+            },
+            "returnParameters": {
+              "id": 161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 160,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "125:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 159,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "124:6:2"
+            },
+            "scope": 163,
+            "src": "65:66:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 279,
+        "src": "34:99:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 278,
+        "linearizedBaseContracts": [
+          278
+        ],
+        "name": "Channel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 165,
+            "name": "accountContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 278,
+            "src": "158:31:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_AccountContract_$163",
+              "typeString": "contract AccountContract"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 164,
+              "name": "AccountContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 163,
+              "src": "158:15:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AccountContract_$163",
+                "typeString": "contract AccountContract"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 176,
+              "nodeType": "Block",
+              "src": "249:75:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 170,
+                      "name": "accountContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 165,
+                      "src": "259:15:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AccountContract_$163",
+                        "typeString": "contract AccountContract"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 172,
+                          "name": "_accountContractAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 167,
+                          "src": "293:23:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 171,
+                        "name": "AccountContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 163,
+                        "src": "277:15:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_AccountContract_$163_$",
+                          "typeString": "type(contract AccountContract)"
+                        }
+                      },
+                      "id": 173,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "277:40:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AccountContract_$163",
+                        "typeString": "contract AccountContract"
+                      }
+                    },
+                    "src": "259:58:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_AccountContract_$163",
+                      "typeString": "contract AccountContract"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "259:58:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 177,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 167,
+                  "name": "_accountContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "209:31:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 166,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "208:33:2"
+            },
+            "returnParameters": {
+              "id": 169,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:0:2"
+            },
+            "scope": 278,
+            "src": "196:128:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Channel.channelStruct",
+            "id": 182,
+            "members": [
+              {
+                "constant": false,
+                "id": 179,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 182,
+                "src": "361:13:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 178,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "361:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 181,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 182,
+                "src": "384:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 180,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "384:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "channelStruct",
+            "nodeType": "StructDefinition",
+            "scope": 278,
+            "src": "330:72:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 186,
+            "name": "channel",
+            "nodeType": "VariableDeclaration",
+            "scope": 278,
+            "src": "408:41:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+              "typeString": "mapping(bytes32 => struct Channel.channelStruct)"
+            },
+            "typeName": {
+              "id": 185,
+              "keyType": {
+                "id": 183,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "416:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "408:33:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                "typeString": "mapping(bytes32 => struct Channel.channelStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 184,
+                "name": "channelStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 182,
+                "src": "427:13:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_channelStruct_$182_storage_ptr",
+                  "typeString": "struct Channel.channelStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 194,
+            "name": "newChannelEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 193,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 188,
+                  "indexed": true,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "489:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 190,
+                  "indexed": false,
+                  "name": "channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "520:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 189,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 192,
+                  "indexed": false,
+                  "name": "ciphertext",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "547:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 191,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:91:2"
+            },
+            "src": "457:114:2"
+          },
+          {
+            "body": {
+              "id": 250,
+              "nodeType": "Block",
+              "src": "669:406:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 206,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 363,
+                              "src": "717:3:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 207,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "717:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 204,
+                            "name": "accountContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 165,
+                            "src": "687:15:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_AccountContract_$163",
+                              "typeString": "contract AccountContract"
+                            }
+                          },
+                          "id": 205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "existsAccount",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 162,
+                          "src": "687:29:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view external returns (bool)"
+                          }
+                        },
+                        "id": 208,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "687:41:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 203,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        366,
+                        367
+                      ],
+                      "referencedDeclaration": 366,
+                      "src": "679:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 209,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "679:50:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 210,
+                  "nodeType": "ExpressionStatement",
+                  "src": "679:50:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 216,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "747:27:2",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 212,
+                              "name": "channel",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "748:7:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                                "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                              }
+                            },
+                            "id": 214,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 213,
+                              "name": "_channelId",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 196,
+                              "src": "756:10:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "748:19:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                              "typeString": "struct Channel.channelStruct storage ref"
+                            }
+                          },
+                          "id": 215,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "exists",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 181,
+                          "src": "748:26:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 211,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        366,
+                        367
+                      ],
+                      "referencedDeclaration": 366,
+                      "src": "739:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 217,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "739:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 218,
+                  "nodeType": "ExpressionStatement",
+                  "src": "739:36:2"
+                },
+                {
+                  "assignments": [
+                    220
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 220,
+                      "name": "newChannel",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 250,
+                      "src": "786:31:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                        "typeString": "struct Channel.channelStruct"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 219,
+                        "name": "channelStruct",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 182,
+                        "src": "786:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_storage_ptr",
+                          "typeString": "struct Channel.channelStruct"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 221,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "786:31:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 227,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 222,
+                        "name": "newChannel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 220,
+                        "src": "827:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                          "typeString": "struct Channel.channelStruct memory"
+                        }
+                      },
+                      "id": 224,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 179,
+                      "src": "827:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 225,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 363,
+                        "src": "846:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 226,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "846:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "827:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 228,
+                  "nodeType": "ExpressionStatement",
+                  "src": "827:29:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 229,
+                        "name": "newChannel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 220,
+                        "src": "866:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                          "typeString": "struct Channel.channelStruct memory"
+                        }
+                      },
+                      "id": 231,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 181,
+                      "src": "866:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 232,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "886:4:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "866:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "866:24:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 239,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 235,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "900:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 237,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 236,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 196,
+                        "src": "908:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "900:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 238,
+                      "name": "newChannel",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 220,
+                      "src": "922:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                        "typeString": "struct Channel.channelStruct memory"
+                      }
+                    },
+                    "src": "900:32:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                      "typeString": "struct Channel.channelStruct storage ref"
+                    }
+                  },
+                  "id": 240,
+                  "nodeType": "ExpressionStatement",
+                  "src": "900:32:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 242,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 363,
+                          "src": "977:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 243,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "977:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 244,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 196,
+                        "src": "1001:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 245,
+                        "name": "_ciphertext",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 198,
+                        "src": "1025:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 241,
+                      "name": "newChannelEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 194,
+                      "src": "948:15:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,bytes32,string memory)"
+                      }
+                    },
+                    "id": 246,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "948:98:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 247,
+                  "nodeType": "EmitStatement",
+                  "src": "943:103:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 248,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1064:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 202,
+                  "id": 249,
+                  "nodeType": "Return",
+                  "src": "1057:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 251,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createChannel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 196,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "600:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 195,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 198,
+                  "name": "_ciphertext",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "620:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 197,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "599:47:2"
+            },
+            "returnParameters": {
+              "id": 202,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "663:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:6:2"
+            },
+            "scope": 278,
+            "src": "577:498:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 263,
+              "nodeType": "Block",
+              "src": "1151:50:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 258,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "1168:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 260,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 259,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 253,
+                        "src": "1176:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1168:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "id": 261,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "exists",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 181,
+                    "src": "1168:26:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 257,
+                  "id": 262,
+                  "nodeType": "Return",
+                  "src": "1161:33:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "existsChannel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "1104:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1104:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1103:20:2"
+            },
+            "returnParameters": {
+              "id": 257,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "1145:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1145:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1144:6:2"
+            },
+            "scope": 278,
+            "src": "1081:120:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 276,
+              "nodeType": "Block",
+              "src": "1282:49:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 271,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "1299:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 273,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 272,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 266,
+                        "src": "1307:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1299:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "id": 274,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "owner",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 179,
+                    "src": "1299:25:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 270,
+                  "id": 275,
+                  "nodeType": "Return",
+                  "src": "1292:32:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 277,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannelOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 266,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 277,
+                  "src": "1232:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 265,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1231:20:2"
+            },
+            "returnParameters": {
+              "id": 270,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 269,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 277,
+                  "src": "1273:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 268,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1273:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1272:9:2"
+            },
+            "scope": 278,
+            "src": "1207:124:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 279,
+        "src": "135:1198:2"
+      }
+    ],
+    "src": "0:1335:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/jochen/WebstormProjects/sesamed/eth/contracts/sesamed/Channel.sol",
+    "exportedSymbols": {
+      "AccountContract": [
+        163
+      ],
+      "Channel": [
+        278
+      ]
+    },
+    "id": 279,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 155,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 163,
+        "linearizedBaseContracts": [
+          163
+        ],
+        "name": "AccountContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 162,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "existsAccount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 158,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 157,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "88:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 156,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "88:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "87:16:2"
+            },
+            "returnParameters": {
+              "id": 161,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 160,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 162,
+                  "src": "125:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 159,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "124:6:2"
+            },
+            "scope": 163,
+            "src": "65:66:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 279,
+        "src": "34:99:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 278,
+        "linearizedBaseContracts": [
+          278
+        ],
+        "name": "Channel",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 165,
+            "name": "accountContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 278,
+            "src": "158:31:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_AccountContract_$163",
+              "typeString": "contract AccountContract"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 164,
+              "name": "AccountContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 163,
+              "src": "158:15:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AccountContract_$163",
+                "typeString": "contract AccountContract"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 176,
+              "nodeType": "Block",
+              "src": "249:75:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 170,
+                      "name": "accountContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 165,
+                      "src": "259:15:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AccountContract_$163",
+                        "typeString": "contract AccountContract"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 172,
+                          "name": "_accountContractAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 167,
+                          "src": "293:23:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 171,
+                        "name": "AccountContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 163,
+                        "src": "277:15:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_AccountContract_$163_$",
+                          "typeString": "type(contract AccountContract)"
+                        }
+                      },
+                      "id": 173,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "277:40:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AccountContract_$163",
+                        "typeString": "contract AccountContract"
+                      }
+                    },
+                    "src": "259:58:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_AccountContract_$163",
+                      "typeString": "contract AccountContract"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "259:58:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 177,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 168,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 167,
+                  "name": "_accountContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 177,
+                  "src": "209:31:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 166,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "209:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "208:33:2"
+            },
+            "returnParameters": {
+              "id": 169,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:0:2"
+            },
+            "scope": 278,
+            "src": "196:128:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Channel.channelStruct",
+            "id": 182,
+            "members": [
+              {
+                "constant": false,
+                "id": 179,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 182,
+                "src": "361:13:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 178,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "361:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 181,
+                "name": "exists",
+                "nodeType": "VariableDeclaration",
+                "scope": 182,
+                "src": "384:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 180,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "384:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "channelStruct",
+            "nodeType": "StructDefinition",
+            "scope": 278,
+            "src": "330:72:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 186,
+            "name": "channel",
+            "nodeType": "VariableDeclaration",
+            "scope": 278,
+            "src": "408:41:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+              "typeString": "mapping(bytes32 => struct Channel.channelStruct)"
+            },
+            "typeName": {
+              "id": 185,
+              "keyType": {
+                "id": 183,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "416:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "408:33:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                "typeString": "mapping(bytes32 => struct Channel.channelStruct)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 184,
+                "name": "channelStruct",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 182,
+                "src": "427:13:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_channelStruct_$182_storage_ptr",
+                  "typeString": "struct Channel.channelStruct"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 194,
+            "name": "newChannelEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 193,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 188,
+                  "indexed": true,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "489:21:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 187,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 190,
+                  "indexed": false,
+                  "name": "channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "520:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 189,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "520:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 192,
+                  "indexed": false,
+                  "name": "ciphertext",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 194,
+                  "src": "547:17:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 191,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "479:91:2"
+            },
+            "src": "457:114:2"
+          },
+          {
+            "body": {
+              "id": 250,
+              "nodeType": "Block",
+              "src": "669:406:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 206,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 363,
+                              "src": "717:3:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 207,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "717:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 204,
+                            "name": "accountContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 165,
+                            "src": "687:15:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_AccountContract_$163",
+                              "typeString": "contract AccountContract"
+                            }
+                          },
+                          "id": 205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "existsAccount",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 162,
+                          "src": "687:29:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                            "typeString": "function (address) view external returns (bool)"
+                          }
+                        },
+                        "id": 208,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "687:41:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 203,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        366,
+                        367
+                      ],
+                      "referencedDeclaration": 366,
+                      "src": "679:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 209,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "679:50:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 210,
+                  "nodeType": "ExpressionStatement",
+                  "src": "679:50:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 216,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "747:27:2",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 212,
+                              "name": "channel",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "748:7:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                                "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                              }
+                            },
+                            "id": 214,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 213,
+                              "name": "_channelId",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 196,
+                              "src": "756:10:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "748:19:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                              "typeString": "struct Channel.channelStruct storage ref"
+                            }
+                          },
+                          "id": 215,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "exists",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 181,
+                          "src": "748:26:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 211,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        366,
+                        367
+                      ],
+                      "referencedDeclaration": 366,
+                      "src": "739:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 217,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "739:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 218,
+                  "nodeType": "ExpressionStatement",
+                  "src": "739:36:2"
+                },
+                {
+                  "assignments": [
+                    220
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 220,
+                      "name": "newChannel",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 250,
+                      "src": "786:31:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                        "typeString": "struct Channel.channelStruct"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 219,
+                        "name": "channelStruct",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 182,
+                        "src": "786:13:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_storage_ptr",
+                          "typeString": "struct Channel.channelStruct"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 221,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "786:31:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 227,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 222,
+                        "name": "newChannel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 220,
+                        "src": "827:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                          "typeString": "struct Channel.channelStruct memory"
+                        }
+                      },
+                      "id": 224,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 179,
+                      "src": "827:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 225,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 363,
+                        "src": "846:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 226,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "846:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "827:29:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 228,
+                  "nodeType": "ExpressionStatement",
+                  "src": "827:29:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 229,
+                        "name": "newChannel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 220,
+                        "src": "866:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                          "typeString": "struct Channel.channelStruct memory"
+                        }
+                      },
+                      "id": 231,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "exists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 181,
+                      "src": "866:17:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 232,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "886:4:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "866:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "866:24:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 239,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 235,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "900:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 237,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 236,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 196,
+                        "src": "908:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "900:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 238,
+                      "name": "newChannel",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 220,
+                      "src": "922:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_memory_ptr",
+                        "typeString": "struct Channel.channelStruct memory"
+                      }
+                    },
+                    "src": "900:32:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                      "typeString": "struct Channel.channelStruct storage ref"
+                    }
+                  },
+                  "id": 240,
+                  "nodeType": "ExpressionStatement",
+                  "src": "900:32:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 242,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 363,
+                          "src": "977:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 243,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "977:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 244,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 196,
+                        "src": "1001:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 245,
+                        "name": "_ciphertext",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 198,
+                        "src": "1025:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 241,
+                      "name": "newChannelEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 194,
+                      "src": "948:15:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (address,bytes32,string memory)"
+                      }
+                    },
+                    "id": 246,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "948:98:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 247,
+                  "nodeType": "EmitStatement",
+                  "src": "943:103:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 248,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1064:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 202,
+                  "id": 249,
+                  "nodeType": "Return",
+                  "src": "1057:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 251,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createChannel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 196,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "600:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 195,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 198,
+                  "name": "_ciphertext",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "620:25:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 197,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "599:47:2"
+            },
+            "returnParameters": {
+              "id": 202,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 251,
+                  "src": "663:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "663:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "662:6:2"
+            },
+            "scope": 278,
+            "src": "577:498:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 263,
+              "nodeType": "Block",
+              "src": "1151:50:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 258,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "1168:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 260,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 259,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 253,
+                        "src": "1176:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1168:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "id": 261,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "exists",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 181,
+                    "src": "1168:26:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 257,
+                  "id": 262,
+                  "nodeType": "Return",
+                  "src": "1161:33:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "existsChannel",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "1104:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1104:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1103:20:2"
+            },
+            "returnParameters": {
+              "id": 257,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 256,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "1145:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 255,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1145:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1144:6:2"
+            },
+            "scope": 278,
+            "src": "1081:120:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 276,
+              "nodeType": "Block",
+              "src": "1282:49:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 271,
+                        "name": "channel",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 186,
+                        "src": "1299:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_channelStruct_$182_storage_$",
+                          "typeString": "mapping(bytes32 => struct Channel.channelStruct storage ref)"
+                        }
+                      },
+                      "id": 273,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 272,
+                        "name": "_channelId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 266,
+                        "src": "1307:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1299:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_channelStruct_$182_storage",
+                        "typeString": "struct Channel.channelStruct storage ref"
+                      }
+                    },
+                    "id": 274,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "owner",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 179,
+                    "src": "1299:25:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 270,
+                  "id": 275,
+                  "nodeType": "Return",
+                  "src": "1292:32:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 277,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChannelOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 267,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 266,
+                  "name": "_channelId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 277,
+                  "src": "1232:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 265,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1231:20:2"
+            },
+            "returnParameters": {
+              "id": 270,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 269,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 277,
+                  "src": "1273:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 268,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1273:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1272:9:2"
+            },
+            "scope": 278,
+            "src": "1207:124:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 279,
+        "src": "135:1198:2"
+      }
+    ],
+    "src": "0:1335:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "219": {
+      "events": {},
+      "links": {},
+      "address": "0x12d9FCc177da6C41c88Cf6674d0615e3ED264914",
+      "transactionHash": "0x28390379bacb1e1b04d21fae03cf5bc081652360fa5cf78dddb489a9f1c7af0e"
+    },
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0x88Bb2112dCe987422f81A3d5872302eCDe673595",
+      "transactionHash": "0x0946a9b4e48cb07acb2dfaf649979d5ef8d50d0fad9de7502b11614e7990d72d"
+    }
+  },
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2019-02-17T21:34:23.631Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

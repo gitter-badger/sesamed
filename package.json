@@ -1,0 +1,59 @@
+{
+  "name": "sesamed",
+  "main": "src/sesamed.js",
+  "scripts": {
+    "test": "mocha",
+    "testContracts": "cd eth && npx truffle test test/contracts.test.js",
+    "lint": "npx eslint src test eth/migrations eth/test",
+    "browserify": "npx browserify src/sesamed.js -o dist/sesamed.min.js",
+    "docs": "npx jsdoc2md --param-list-format list -t jsdoc2md/README.hbs src/*.js > README.md; echo"
+  },
+  "version": "1.0.0",
+  "author": {
+    "name": "RED Medical Systems GmbH",
+    "email": "info@redmedical.de",
+    "url": "https://www.redmedical.de"
+  },
+  "bugs": {
+    "url": "https://github.com/redmedical/sesamed/issues"
+  },
+  "description": "Blockchain for the Healthcare System",
+  "homepage": "https://github.com/redmedical/sesamed",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redmedical/sesamed.git"
+  },
+  "browser": {
+    "openpgp": "openpgp/dist/openpgp.min.js"
+  },
+  "keywords": [
+    "ethereum",
+    "blockchain",
+    "healthcare",
+    "privacy",
+    "communication"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.14.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "ganache-cli": "^6.3.0",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^4.1.0",
+    "sinon": "^7.2.3",
+    "sinon-chai": "^3.3.0",
+    "truffle": "^5.0.4",
+    "truffle-assertions": "^0.8.0"
+  },
+  "dependencies": {
+    "bs58": "^4.0.1",
+    "ethers": "^4.0.25",
+    "ipfs-mini": "^1.1.5",
+    "openpgp": "^4.4.7"
+  }
+}

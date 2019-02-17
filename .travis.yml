@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 8.9.4
+script:
+  - npm run lint
+  - npm test
+  - cd eth && npx ganache-cli > /dev/null 2>&1 &
+  - cd eth && sh waitForGanache.sh && npm run testContracts
